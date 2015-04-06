@@ -1,0 +1,21 @@
+<%= form_for([@category, @article || @category.articles.new ]) do |f| %>
+  <p>
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </p>
+    <p>
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </p>
+    <p>
+    <%= f.label :body %><br>
+    <%= f.text_area :body %>
+  </p>
+    <p>
+    <%= f.label :cost_in_dollars %><br>
+    <%= f.text_field :cost_in_dollars %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
