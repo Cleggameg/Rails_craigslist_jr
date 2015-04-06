@@ -1,0 +1,23 @@
+<table>
+  <tr>
+  <th>Title</th>
+    <td><%= article.title %></td>
+    <td> <%= link_to "Edit", edit_category_article_path(@category, article) %> </td>
+    <td> <%= link_to "Delete", category_article_path(@category, article),
+        method: :delete,
+        data: { confirm: "Are you sure?"} %> </td>
+    </tr>
+  </tr>
+</table>
+<p>
+  <strong>Body:</strong>
+  <%= article.body %>
+</p>
+<p>
+  <strong>Cost in dollars:</strong>
+  <%= article.cost_in_dollars %>
+</p>
+<p>
+  <strong>Email:</strong>
+  <%= article.email %>
+</p>
