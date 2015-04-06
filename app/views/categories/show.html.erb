@@ -4,4 +4,10 @@
     <%= @category.title %>
   </p>
 
+  <h2>Articles:</h2>
+  <%= render @category.articles %>
+
+  <h2>Add an article</h2>
+  <%= render 'articles/form' %>
+
 <%= link_to 'Back', categories_path %>
