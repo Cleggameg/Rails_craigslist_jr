@@ -1,4 +1,4 @@
-<%= form_for([@category, @article || @category.articles.new ]) do |f| %>
+<%= form_for([@category, @article || @category.articles.new ], remote: true) do |f| %>
   <p>
     <%= f.label :title %><br>
     <%= f.text_field :title %>

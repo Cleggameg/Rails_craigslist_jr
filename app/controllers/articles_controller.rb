@@ -18,7 +18,11 @@ class ArticlesController < ApplicationController
   def create
     @category = Category.find(params[:category_id])
     @article = @category.articles.create(article_params)
-    redirect_to category_path(@category)
+    if request.xhr?
+      render @article, layout: false
+    else
+      redirect_to category_path(@category)
+    end
   end
 
   def destroy
